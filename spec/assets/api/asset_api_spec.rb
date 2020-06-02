@@ -19,7 +19,7 @@ require 'json'
 describe 'AssetApi' do
   before do
     # run before each test
-    @api_instance = XeroRuby::Assets::AssetApi.new
+    @api_instance = XeroRuby::AssetApi.new
   end
 
   after do
@@ -28,7 +28,7 @@ describe 'AssetApi' do
 
   describe 'test an instance of AssetApi' do
     it 'should create an instance of AssetApi' do
-      expect(@api_instance).to be_instance_of(XeroRuby::Assets::AssetApi)
+      expect(@api_instance).to be_instance_of(XeroRuby::AssetApi)
     end
   end
 
