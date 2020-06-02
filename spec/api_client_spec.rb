@@ -12,23 +12,23 @@ OpenAPI Generator version: 4.3.0
 
 require 'spec_helper'
 
-describe XeroRuby::Accounting::ApiClient do
+describe XeroRuby::ApiClient do
   context 'initialization' do
     context 'URL stuff' do
       context 'host' do
         it 'removes http from host' do
-          XeroRuby::Accounting.configure { |c| c.host = 'http://example.com' }
-          expect(XeroRuby::Accounting::Configuration.default.host).to eq('example.com')
+          XeroRuby.configure { |c| c.host = 'http://example.com' }
+          expect(XeroRuby::Configuration.default.host).to eq('example.com')
         end
 
         it 'removes https from host' do
-          XeroRuby::Accounting.configure { |c| c.host = 'https://wookiee.com' }
-          expect(XeroRuby::Accounting::ApiClient.default.config.host).to eq('wookiee.com')
+          XeroRuby.configure { |c| c.host = 'https://wookiee.com' }
+          expect(XeroRuby::Configuration.default.host).to eq('wookiee.com')
         end
 
         it 'removes trailing path from host' do
-          XeroRuby::Accounting.configure { |c| c.host = 'hobo.com/v4' }
-          expect(XeroRuby::Accounting::Configuration.default.host).to eq('hobo.com')
+          XeroRuby.configure { |c| c.host = 'hobo.com/v4' }
+          expect(XeroRuby::Configuration.default.host).to eq('hobo.com')
         end
       end
 
